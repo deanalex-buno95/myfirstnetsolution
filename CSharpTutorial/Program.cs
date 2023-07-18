@@ -5,6 +5,34 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CSharpTutorialPrograms;
+
+
+namespace CSharpTutorialPrograms
+{
+    public class BasicCalculator
+    {
+        public void doConversions()
+        {
+            /* Issues */
+            // Console.WriteLine("43" + "56")  // Concatenation.
+            // int num = "45"  // Wrong data type.
+            /* Conversion */
+            int num = Convert.ToInt32("45");
+        }
+        public void runBasicCalculator()
+        {
+            /* Prompts */
+            Console.Write("Enter a number: ");
+            double num1 = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Enter a number: ");
+            double num2 = Convert.ToDouble(Console.ReadLine());
+            /* Print sum */
+            Console.WriteLine(num1 + num2);
+        }
+    }
+}
+
 
 namespace CSharpTutorial
 {
@@ -114,6 +142,14 @@ namespace CSharpTutorial
             {
                 Console.WriteLine("Invalid age value!");
             }
+            
+            Console.WriteLine();
+            
+            /* Lesson 05 (Basic Calculator) */
+            Console.WriteLine("* Lesson 05 (Basic Calculator) *");
+            CSharpTutorialPrograms.BasicCalculator basicCalculator = new CSharpTutorialPrograms.BasicCalculator();
+            basicCalculator.doConversions();
+            basicCalculator.runBasicCalculator();
             
             Console.WriteLine();
 
