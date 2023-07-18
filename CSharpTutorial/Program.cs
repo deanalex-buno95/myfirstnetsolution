@@ -95,6 +95,28 @@ namespace CSharpTutorial
             Console.WriteLine(Math.Min(height, 1.8f));
             Console.WriteLine(Math.Round(4.5));  // Print nearest whole number.
             
+            Console.WriteLine();
+            
+            /* Lesson 04 (Get User Input) */
+            Console.WriteLine("* Lesson 04 (Get User Input) *");
+            // (Get User Input) Prompt user for information.
+            Console.Write("Enter your name: ");  // Prompt.
+            string name = Console.ReadLine();  // Pause and input.
+            Console.WriteLine("Hello " + name + "!");  // Print input.
+            Console.Write("Enter your age: ");  // Another input.
+            string ageString = Console.ReadLine();
+            try
+            {
+                int ageInteger = Int32.Parse(ageString);
+                Console.WriteLine("You are " + ageInteger + " years old!");
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Invalid age value!");
+            }
+            
+            Console.WriteLine();
+
             /* End Execution */
             // Console.ReadLine();  // Keep console up to see what is in the console before termination (useful for VS Code)
         }
