@@ -183,6 +183,24 @@ namespace CSharpTutorial
             MadLibsGame madLibsGame = new MadLibsGame();
             // (Mad Libs Game) Run game.
             madLibsGame.runMadLibsGame();
+            
+            Console.WriteLine();
+            
+            /* Lesson 07 (Arrays) */
+            Console.WriteLine("* Lesson 07 (Arrays) *");
+            // (Arrays - Create arrays) Make arrays of a certain data type.
+            int[] commonJerseyNumbers = {32, 3 , 8, 43, 4, 18, 99, 42, 23, 5};
+            // (Arrays - Access arrays) Get values from arrays.
+            Console.WriteLine($"commonJerseyNumbers[0] = {commonJerseyNumbers[0]}");  // First element, until index n-1.
+            // (Arrays - Modify arrays) Update values from arrays.
+            commonJerseyNumbers[2] = 24;  // Update the third element before printing.
+            Console.WriteLine($"commonJerseyNumbers[2] = {commonJerseyNumbers[2]}");
+            // (Arrays - Create empty arrays) Make arrays that are empty, then populate by insertion (should have length limit before creation).
+            string[] rggCharacters = new string[8];
+            rggCharacters[1] = "Takayuki Yagami";
+            rggCharacters[7] = "Fumiya Sugiura";
+            Console.WriteLine($"rggCharacters[1] = {rggCharacters[1]}");
+            Console.WriteLine($"rggCharacters[7] = {rggCharacters[7]}");
 
             /* End Execution */
             // Console.ReadLine();  // Keep console up to see what is in the console before termination (useful for VS Code)
