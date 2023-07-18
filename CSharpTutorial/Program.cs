@@ -31,6 +31,29 @@ namespace CSharpTutorialPrograms
             Console.WriteLine(num1 + num2);
         }
     }
+
+    public class MadLibsGame
+    {
+        public void runMadLibsGame()
+        {
+            /* Declare variables */
+            string color, pluralNoun, celebrity;
+            
+            /* Prompts */
+            Console.Write("Enter a color: ");
+            color = Console.ReadLine().ToUpper();
+            Console.Write("Enter a plural noun: ");
+            pluralNoun = Console.ReadLine().ToUpper();
+            Console.Write("Enter a celebrity: ");
+            celebrity = Console.ReadLine().ToUpper();
+            
+            /* Use interpolated strings */
+            Console.WriteLine($"Roses are {color}.");
+            Console.WriteLine($"{pluralNoun} are blue.");
+            Console.WriteLine($"I love {celebrity}.");
+            Console.WriteLine("And so do you.");
+        }
+    }
 }
 
 
@@ -147,11 +170,19 @@ namespace CSharpTutorial
             
             /* Lesson 05 (Basic Calculator) */
             Console.WriteLine("* Lesson 05 (Basic Calculator) *");
-            CSharpTutorialPrograms.BasicCalculator basicCalculator = new CSharpTutorialPrograms.BasicCalculator();
+            BasicCalculator basicCalculator = new BasicCalculator();
+            // (Basic Calculator - Conversions) Convert text to integers.
             basicCalculator.doConversions();
+            // (Basic Calculator - Run) Run calculator.
             basicCalculator.runBasicCalculator();
             
             Console.WriteLine();
+
+            /* Lesson 06 (Mad Libs Game) */
+            Console.WriteLine("* Lesson 06 (Mad Libs Game) *");
+            MadLibsGame madLibsGame = new MadLibsGame();
+            // (Mad Libs Game) Run game.
+            madLibsGame.runMadLibsGame();
 
             /* End Execution */
             // Console.ReadLine();  // Keep console up to see what is in the console before termination (useful for VS Code)
