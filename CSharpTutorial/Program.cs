@@ -218,6 +218,15 @@ namespace CSharpTutorial
             PrintGradeAndScore('E', 40);
             PrintGradeAndScore('F', 0);
             
+            Console.WriteLine();
+            
+            /* Lesson 09 (Return Statement) */
+            Console.WriteLine("* Lesson 09 (Return Statement) *");
+            // (Return Methods - CubeInteger) Method to return an integer that is cubed.
+            Console.WriteLine($"Cube of 9 is {CubeInteger(9)}.");
+            // (Return Methods - GetMortgageValue) Method to return a decimal of a mortgage value of a property.
+            Console.WriteLine($"Mortgage value of Boardwalk is ${GetMortgageValue(400.0m)}.");
+
             /* End Execution */
             // Console.ReadLine();  // Keep console up to see what is in the console before termination (useful for VS Code)
         }
@@ -238,6 +247,16 @@ namespace CSharpTutorial
         {
             /* Print grade and score, the two parameters. */
             Console.WriteLine($"Grade: {grade}, Score: {score}");
+        }
+
+        static int CubeInteger(int integer)
+        {
+            return integer * integer * integer;
+        }
+
+        static decimal GetMortgageValue(decimal propertyValue)
+        {
+            return propertyValue / 2.0m;
         }
     }
 }
