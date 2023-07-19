@@ -94,6 +94,34 @@ namespace CSharpTutorialPrograms
             }
         }
     }
+
+    public class GuessingGame
+    {
+        public void RunGuessingGame()
+        {
+            /* Variables */
+            const string secretWord = "DRAGON";  // Secret word.
+            const int maxGuesses = 3;  // Max number of guesses.
+            string guess = "";  // Guess.
+            int numberOfGuesses = 0;  // Number of guesses.
+            /* While loop */
+            while (guess != secretWord && numberOfGuesses < maxGuesses)  // Continue looping till the correct guess, or run out of guesses.
+            {
+                Console.Write("Enter guess: ");
+                guess = Console.ReadLine().ToUpper();
+                numberOfGuesses++;
+            }
+            /* Win or lose. */
+            if (guess == secretWord)  // Win
+            {
+                Console.WriteLine("You win!");
+            }
+            else  // Lose
+            {
+                Console.WriteLine("Better luck next time!");
+            }
+        }
+    }
 }
 
 
@@ -125,17 +153,14 @@ namespace CSharpTutorial
             int characterAge = 55;  // Integer variable.
             string characterAura;  // Alternative way of initializing variables.
             characterAura = "red";
-            
             // (Variables - Editing With Variables) With variables, editing is more efficient.
             Console.WriteLine("There is a man named " + character + ".");
             Console.WriteLine("He is currently " + characterAge + " years old.");
             Console.WriteLine("He currently glows a/an " + characterAura + " aura.");
-            
             // (Variables - Update variables) The variables can be updated.
             character = "Yagami";
             characterAge = 40;
             characterAura = "blue";
-            
             // (Variables - Editing With Updated Variables) With updated variables, the values have changed.
             Console.WriteLine("There is a man named " + character + ".");
             Console.WriteLine("He is currently " + characterAge + " years old.");
@@ -313,6 +338,7 @@ namespace CSharpTutorial
             Console.WriteLine();
             
             /* Lesson 12 (Switch Statement) */
+            Console.WriteLine("* Lesson 12 (Switch Statement) *");
             // (Switch Statement - RGG character) Get the RGG character based on aura color.
             Console.Write("Enter a color: ");
             string auraColor = Console.ReadLine().ToUpper();
@@ -321,6 +347,7 @@ namespace CSharpTutorial
             Console.WriteLine();
             
             /* Lesson 13 (While Loops) */
+            Console.WriteLine("* Lesson 13 (While Loops) *");
             // (While Loops - Traditional) Use traditional while loops, check the condition before executing the code.
             int numberOfSteps = 0;
             Console.Write("Enter a number: ");
@@ -348,6 +375,14 @@ namespace CSharpTutorial
             } while (x < 4);
             Console.WriteLine($"x becomes {x}, since it executes the code before the conditional check.");
 
+            Console.WriteLine();
+
+            /* Lesson 14 (Guessing Game) */
+            Console.WriteLine("* Lesson 14 (Guessing Game) *");
+            // (Guessing Game) Run game.
+            GuessingGame guessingGame = new GuessingGame();
+            guessingGame.RunGuessingGame();
+
             /* End Execution */
             // Console.ReadLine();  // Keep console up to see what is in the console before termination (useful for VS Code).
         }
@@ -372,11 +407,13 @@ namespace CSharpTutorial
 
         static int CubeInteger(int integer)
         {
+            /* Integer ^ 3. */
             return integer * integer * integer;
         }
 
         static decimal GetMortgageValue(decimal propertyValue)
         {
+            /* Mortgage is half of the property value. */
             return propertyValue / 2.0m;
         }
 
