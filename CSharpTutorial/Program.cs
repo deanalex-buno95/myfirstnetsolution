@@ -310,6 +310,14 @@ namespace CSharpTutorial
             // (Better Calculator - Run) Run calculator.
             betterCalculator.RunBetterCalculator();
             
+            Console.WriteLine();
+            
+            /* Lesson 12 (Switch Statement) */
+            // (Switch Statement - RGG character) Get the RGG character based on aura color.
+            Console.Write("Enter a color: ");
+            string auraColor = Console.ReadLine().ToUpper();
+            Console.WriteLine($"{auraColor} aura: {GetRggCharacterFromAuraColor(auraColor)}");
+
             /* End Execution */
             // Console.ReadLine();  // Keep console up to see what is in the console before termination (useful for VS Code).
         }
@@ -340,6 +348,32 @@ namespace CSharpTutorial
         static decimal GetMortgageValue(decimal propertyValue)
         {
             return propertyValue / 2.0m;
+        }
+
+        static string GetRggCharacterFromAuraColor(string auraColor)
+        {
+            /* Pass a value to check each case. */
+            switch (auraColor)
+            {
+                case "RED":
+                    return "KAZUMA KIRYU";
+                case "BLUE":
+                    return "TAKAYUKI YAGAMI";
+                case "YELLOW":
+                    return "RYUJI GODA";
+                case "GREEN":
+                    return "TAIGA SAEJIMA";
+                case "ORANGE":
+                    return "MASAHARU KAITO";
+                case "CYAN":
+                    return "ICHIBAN KASUGA";
+                case "PURPLE":
+                    return "GORO MAJIMA";
+                case "WHITE":
+                    return "FUMIYA SUGIURA";
+                default:
+                    return "Character not found!";
+            }
         }
     }
 }
