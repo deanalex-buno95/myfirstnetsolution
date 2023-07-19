@@ -382,7 +382,33 @@ namespace CSharpTutorial
             // (Guessing Game) Run game.
             GuessingGame guessingGame = new GuessingGame();
             guessingGame.RunGuessingGame();
-
+            
+            Console.WriteLine();
+            
+            /* Lesson 15 (For Loops) */
+            Console.WriteLine("* Lesson 15 (For Loops) *");
+            // (For Loop - Standard) Typical loop with incrementing integer variable.
+            Console.WriteLine("Standard Loop:");
+            int i;
+            for (i = 0; i < 5; i++)
+            {
+                Console.WriteLine(i);
+            }
+            // (For Loop - Reverse) Typical loop with decrementing integer variable.
+            Console.WriteLine("Reverse Loop:");
+            int j;
+            for (j = 5; j > 0; j--)
+            {
+                Console.WriteLine(j);
+            }
+            // (For Loop - Foreach) Iterate through non-integer collection.
+            Console.WriteLine("Foreach Loop:");
+            string[] colorList = {"RED", "BLUE", "YELLOW", "GREEN", "ORANGE", "CYAN", "PURPLE", "WHITE"};
+            foreach (string color in colorList)
+            {
+                Console.WriteLine(color);
+            }
+            
             /* End Execution */
             // Console.ReadLine();  // Keep console up to see what is in the console before termination (useful for VS Code).
         }
