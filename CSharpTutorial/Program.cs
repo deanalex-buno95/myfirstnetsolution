@@ -201,9 +201,43 @@ namespace CSharpTutorial
             rggCharacters[7] = "Fumiya Sugiura";
             Console.WriteLine($"rggCharacters[1] = {rggCharacters[1]}");
             Console.WriteLine($"rggCharacters[7] = {rggCharacters[7]}");
-
+            
+            Console.WriteLine();
+            
+            /* Lesson 08 (Arrays) */
+            Console.WriteLine("* Lesson 08 (Methods) *");
+            // (Methods - SayHi) Method to print out "Hi! User!".
+            SayHi();  // Function call.
+            SayHelloUser("Jeremy");  // With parameters (can change).
+            SayHelloUser("Kevin");
+            SayHelloUser("Lawrence");
+            PrintGradeAndScore('A', 83);
+            PrintGradeAndScore('B', 73);
+            PrintGradeAndScore('C', 63);
+            PrintGradeAndScore('D', 50);
+            PrintGradeAndScore('E', 40);
+            PrintGradeAndScore('F', 0);
+            
             /* End Execution */
             // Console.ReadLine();  // Keep console up to see what is in the console before termination (useful for VS Code)
+        }
+
+        static void SayHi()
+        {
+            /* Just print "Hi! User!" */
+            Console.WriteLine("Hi! User!");
+        }
+
+        static void SayHelloUser(string user)
+        {
+            /* Print "Hello {user}!", user being a parameter. */
+            Console.WriteLine($"Hello {user}!");
+        }
+
+        static void PrintGradeAndScore(char grade, int score)
+        {
+            /* Print grade and score, the two parameters. */
+            Console.WriteLine($"Grade: {grade}, Score: {score}");
         }
     }
 }
