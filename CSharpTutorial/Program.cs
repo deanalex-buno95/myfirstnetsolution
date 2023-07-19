@@ -222,13 +222,48 @@ namespace CSharpTutorial
             
             /* Lesson 09 (Return Statement) */
             Console.WriteLine("* Lesson 09 (Return Statement) *");
-            // (Return Methods - CubeInteger) Method to return an integer that is cubed.
+            // (Return Methods - CubeInteger) Method to return an Integer that is cubed.
             Console.WriteLine($"Cube of 9 is {CubeInteger(9)}.");
-            // (Return Methods - GetMortgageValue) Method to return a decimal of a mortgage value of a property.
+            // (Return Methods - GetMortgageValue) Method to return a Decimal of a mortgage value of a property.
             Console.WriteLine($"Mortgage value of Boardwalk is ${GetMortgageValue(400.0m)}.");
 
+            Console.WriteLine();
+            
+            /* Lesson 10 (If Statement) */
+            Console.WriteLine("* Lesson 10 (If Statement) *");
+            // (If Statement - Boolean Variables) Use a variable for booleans in If Statement.
+            bool isProperty = true;  // True.
+            if (isProperty)
+            {
+                Console.WriteLine("(Printed) You wanna buy this property?");  // Print this.
+            }
+            isProperty = false;  // False.
+            if (isProperty)
+            {
+                Console.WriteLine("(Not printed) You wanna buy this property?");  // Will not print this.
+            }
+            else
+            {
+                Console.WriteLine("(Printed) Move on.");  // Print this instead.
+            }
+            // (If Statement - Combine Conditions) Use either `&&` or `||` to combine conditionals.
+            Console.Write("Enter a year: ");
+            int year = Convert.ToInt32(Console.ReadLine());
+            if (year < 1)
+            {
+                Console.WriteLine($"{year} is an invalid year!");
+            }
+            else if ((year % 100 == 0 && year % 400 == 0) || (!(year % 100 == 0) && year % 4 == 0))  // && is AND, and || is OR, !(<expression>) is a a negation of expression.
+            {
+                Console.WriteLine($"{year} is a leap year!");
+            }
+            else
+            {
+                Console.WriteLine($"{year} is a common year!");
+            }
+
             /* End Execution */
-            // Console.ReadLine();  // Keep console up to see what is in the console before termination (useful for VS Code)
+            // Console.ReadLine();  // Keep console up to see what is in the console before termination (useful for VS Code).
         }
 
         static void SayHi()
