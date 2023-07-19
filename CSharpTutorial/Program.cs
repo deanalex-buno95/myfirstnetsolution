@@ -54,6 +54,46 @@ namespace CSharpTutorialPrograms
             Console.WriteLine("And so do you.");
         }
     }
+
+    public class BetterCalculator
+    {
+        public void RunBetterCalculator()
+        {
+            /* Variables */
+            double num1, num2;
+            string op;
+            
+            /* Prompts */
+            Console.Write("Enter a number: ");
+            num1 = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Enter an operator: ");
+            op = Console.ReadLine();
+            Console.Write("Enter another number: ");
+            num2 = Convert.ToDouble(Console.ReadLine());
+            
+            /* Conditionals */
+            if (op == "+")
+            {
+                Console.WriteLine($"{num1} + {num2} = {num1 + num2}");
+            }
+            else if (op == "-")
+            {
+                Console.WriteLine($"{num1} - {num2} = {num1 - num2}");
+            }
+            else if (op == "*")
+            {
+                Console.WriteLine($"{num1} * {num2} = {num1 * num2}");
+            }
+            else if (op == "/")
+            {
+                Console.WriteLine($"{num1} / {num2} = {num1 / num2}");
+            }
+            else
+            {
+                Console.WriteLine("Invalid operator!");
+            }
+        }
+    }
 }
 
 
@@ -262,6 +302,14 @@ namespace CSharpTutorial
                 Console.WriteLine($"{year} is a common year!");
             }
 
+            Console.WriteLine();
+            
+            /* Lesson 11 (Better Calculator) */
+            Console.WriteLine("* Lesson 11 (Better Calculator) *");
+            BetterCalculator betterCalculator = new BetterCalculator();
+            // (Better Calculator - Run) Run calculator.
+            betterCalculator.RunBetterCalculator();
+            
             /* End Execution */
             // Console.ReadLine();  // Keep console up to see what is in the console before termination (useful for VS Code).
         }
