@@ -317,6 +317,36 @@ namespace CSharpTutorial
             Console.Write("Enter a color: ");
             string auraColor = Console.ReadLine().ToUpper();
             Console.WriteLine($"{auraColor} aura: {GetRggCharacterFromAuraColor(auraColor)}");
+            
+            Console.WriteLine();
+            
+            /* Lesson 13 (While Loops) */
+            // (While Loops - Traditional) Use traditional while loops, check the condition before executing the code.
+            int numberOfSteps = 0;
+            Console.Write("Enter a number: ");
+            int num = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"({num}) Number of steps: {numberOfSteps}");
+            while (num > 1)  // 3x + 1 loop, purpose of this condition is to avoid the infinite loop.
+            {
+                if (num % 2 == 1)  // Odd
+                {
+                    num = 3 * num + 1;
+                }
+                else  // Even
+                {
+                    num /= 2;
+                }
+                numberOfSteps++;
+                Console.WriteLine($"({num}) Number of steps: {numberOfSteps}");
+            }
+            Console.WriteLine($"It takes {numberOfSteps} steps to reach {num}.");
+            // (While Loops - Do) Use do while loops, which will execute the code before checking the condition.
+            int x = 4;
+            do
+            {
+                x++;  // Execute code, then check.
+            } while (x < 4);
+            Console.WriteLine($"x becomes {x}, since it executes the code before the conditional check.");
 
             /* End Execution */
             // Console.ReadLine();  // Keep console up to see what is in the console before termination (useful for VS Code).
