@@ -409,6 +409,16 @@ namespace CSharpTutorial
                 Console.WriteLine(color);
             }
             
+            Console.WriteLine();
+            
+            /* Lesson 16 (Exponent Function) */
+            Console.WriteLine("* Lesson 16 (Exponent Function) *");
+            // (Exponent Function) Get powered integer, b^e.
+            Console.WriteLine($"5^3 = {GetPoweredInteger(5, 3)}");
+            Console.WriteLine($"2^15 = {GetPoweredInteger(2, 15)}");
+            Console.WriteLine($"3^8 = {GetPoweredInteger(3, 8)}");
+            Console.WriteLine($"7^11 = {GetPoweredInteger(7, 11)}");
+
             /* End Execution */
             // Console.ReadLine();  // Keep console up to see what is in the console before termination (useful for VS Code).
         }
@@ -467,6 +477,18 @@ namespace CSharpTutorial
                 default:
                     return "Character not found!";
             }
+        }
+
+        static int GetPoweredInteger(int baseInteger, int powInteger)
+        {
+            /* Variables */
+            int result = 1;
+            /* For loop to get powered integer. */
+            for (int i = 0; i < powInteger; i++)
+            {
+                result *= baseInteger;
+            }
+            return result;
         }
     }
 }
