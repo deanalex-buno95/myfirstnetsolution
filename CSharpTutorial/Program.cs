@@ -418,6 +418,26 @@ namespace CSharpTutorial
             Console.WriteLine($"2^15 = {GetPoweredInteger(2, 15)}");
             Console.WriteLine($"3^8 = {GetPoweredInteger(3, 8)}");
             Console.WriteLine($"7^11 = {GetPoweredInteger(7, 11)}");
+            
+            Console.WriteLine();
+            
+            /* Lesson 17 (2D Arrays) */
+            Console.WriteLine("* Lesson 17 (2D Arrays) *");
+            // (2D Arrays - Making 2D array) Make a 2D array of integers.
+            int[,] numberGrid =
+            {
+                {1, 2, 3, 4},
+                {5, 6, 7, 8},
+                {9, 10, 11, 12}
+            };
+            // (2D Arrays - Nested Loops) Use nested loops to print out each integer.
+            for (int k = 0; k < 3; k++)
+            {
+                for (int l = 0; l < 4; l++)
+                {
+                    Console.WriteLine($"numberGrid[{k}, {l}] = {numberGrid[k, l]}.");
+                }
+            }
 
             /* End Execution */
             // Console.ReadLine();  // Keep console up to see what is in the console before termination (useful for VS Code).
