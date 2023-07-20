@@ -451,6 +451,28 @@ namespace CSharpTutorial
                     Console.WriteLine($"stringMatrix[{k}, {l}] = {stringMatrix[k, l]}");
                 }
             }
+            
+            Console.WriteLine();
+            
+            /* Lesson 18 (Exception Handling) */
+            Console.WriteLine("* Lesson 18 (Exception Handling) *");
+            /* An example of handling exceptions. */
+            try
+            {
+                Console.Write("Your height (m): ");
+                var yourHeight = Convert.ToDouble(Console.ReadLine());
+                Console.Write("Your weight (kg): ");
+                var yourWeight = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine($"Your BMI is: {yourWeight / (yourHeight * yourHeight)}");
+            }
+            catch (FormatException fe)  // Can be the general Exception, or specific ones like this.
+            {
+                Console.WriteLine(fe);
+            }
+            finally
+            {
+                Console.WriteLine("BMI process finished.");
+            }
 
             /* End Execution */
             // Console.ReadLine();  // Keep console up to see what is in the console before termination (useful for VS Code).
