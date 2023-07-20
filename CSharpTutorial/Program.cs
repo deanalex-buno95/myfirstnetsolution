@@ -430,12 +430,25 @@ namespace CSharpTutorial
                 {5, 6, 7, 8},
                 {9, 10, 11, 12}
             };
+            // (2D Arrays - Making empty 2D array) Make a new 2D array.
+            string[,] stringMatrix = new string[2, 2];
+            stringMatrix[0, 0] = "RED";
+            stringMatrix[0, 1] = "BLUE";
+            stringMatrix[1, 0] = "YELLOW";
+            stringMatrix[1, 1] = "GREEN";
             // (2D Arrays - Nested Loops) Use nested loops to print out each integer.
             for (int k = 0; k < 3; k++)
             {
                 for (int l = 0; l < 4; l++)
                 {
                     Console.WriteLine($"numberGrid[{k}, {l}] = {numberGrid[k, l]}.");
+                }
+            }
+            for (int k = 0; k < 2; k++)
+            {
+                for (int l = 0; l < 2; l++)
+                {
+                    Console.WriteLine($"stringMatrix[{k}, {l}] = {stringMatrix[k, l]}");
                 }
             }
 
