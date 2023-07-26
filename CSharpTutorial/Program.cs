@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -123,7 +124,6 @@ namespace CSharpTutorialPrograms
         }
     }
 }
-
 
 namespace CSharpTutorial
 {
@@ -474,8 +474,41 @@ namespace CSharpTutorial
                 Console.WriteLine("BMI process finished.");
             }
 
+            Console.WriteLine();
+            
+            /* Lesson 19 (Classes and Objects) */
+            Console.WriteLine("* Lesson 19 (Classes and Objects) *");
+            // (Classes and Objects - Create Objects of Class) Constructor.
+            RggCharacter rggCharacter = new RggCharacter("Buno", "Santos", new DateTime(2006, 12, 24), "Filipino", 1.71);
+            // (Classes and Objects - Object Methods) Object (instance) method meant for all objects.
+            Console.WriteLine($"Age: {rggCharacter.GetAge()}");
+            // (Classes and Objects - Object Getters and Setters) A more robust way of getting and modifying attribute values.
+            Console.WriteLine($"Date of birth: {rggCharacter.DateOfBirth}");
+            rggCharacter.DateOfBirth = new DateTime(2002, 3, 23);
+            Console.WriteLine($"New date of birth: {rggCharacter.DateOfBirth}");
+            // (Classes and Objects - Static Attribute of Class) Attributes that relate to all classes, as opposed to just 1 object.
+            Console.WriteLine($"Company that created RGG: {RggCharacter.CompanyName}");
+            Console.WriteLine($"Number of RGG Characters created: {RggCharacter.CharacterCount}");
+            RggCharacter anotherRggCharacter = new RggCharacter();
+            Console.WriteLine($"Age: {anotherRggCharacter.GetAge()}");
+            Console.WriteLine($"Number of RGG Characters created now: {RggCharacter.CharacterCount}");
+            // (Classes and Objects - Static Methods of Class) Methods that relate to all classes, as opposed to just 1 object.
+            RggCharacter.NotifyUser();
+            var v = Math.Abs(-69);  // Math is a static class, disallowing instances.
+            Console.WriteLine(v);
+            // (Classes and Objects - Inheritance) Inherit methods and attributes from the parent class.
+            RggFightingCharacter.NotifyUser();
+            RggFightingCharacter kazumaKiryu = new RggFightingCharacter("Kiryu", "Kazuma", new DateTime(1968, 6, 17), "Japanese", 1.84, new ArrayList());
+            kazumaKiryu.AddFightingStyles("Dragon");
+            kazumaKiryu.AddFightingStyles("Brawler");
+            kazumaKiryu.AddFightingStyles("Rush");
+            kazumaKiryu.AddFightingStyles("Beast");
+            kazumaKiryu.AddFightingStyles("Yakuza");
+            kazumaKiryu.AddFightingStyles("Agent");
+            Console.WriteLine(kazumaKiryu);
+            
             /* End Execution */
-            // Console.ReadLine();  // Keep console up to see what is in the console before termination (useful for VS Code).
+            // Console.ReadLine("Press ENTER to end the program.");  // Keep console up to see what is in the console before termination (useful for VS Code).
         }
 
         static void SayHi()
