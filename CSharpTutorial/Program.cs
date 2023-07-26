@@ -269,7 +269,7 @@ namespace CSharpTutorial
             
             Console.WriteLine();
             
-            /* Lesson 08 (Arrays) */
+            /* Lesson 08 (Methods) */
             Console.WriteLine("* Lesson 08 (Methods) *");
             // (Methods - SayHi) Method to print out "Hi! User!".
             SayHi();  // Function call.
@@ -476,7 +476,7 @@ namespace CSharpTutorial
 
             Console.WriteLine();
             
-            /* Lesson 19 (Classes and Objects) */
+            /* Lesson 19 (Classes + Objects) */
             Console.WriteLine("* Lesson 19 (Classes and Objects) *");
             // (Classes and Objects - Create Objects of Class) Constructor.
             RggCharacter rggCharacter = new RggCharacter("Buno", "Santos", new DateTime(2006, 12, 24), "Filipino", 1.71);
