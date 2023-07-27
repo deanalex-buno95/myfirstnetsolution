@@ -144,7 +144,29 @@ void lesson05()
     cin >> num1;
     cout << "Enter second number: ";
     cin >> num2;
-    cout << num1 << " + " << num2 << " = " << num1 + num2;
+    // (Basic Calculator) Add both numbers together.
+    cout << num1 << " + " << num2 << " = " << num1 + num2 << endl;
+}
+
+void lesson06()
+{
+    /**
+     * Lesson 6: Mad Libs Game
+     */
+    cout << "* Lesson 6: Mad Libs Game *" << endl;
+    // (Mad Libs Game) Declare variables.
+    string color, plural_noun, celebrity;
+    // (Mad Libs Game) Prompt the user for three string inputs.
+    cout << "Enter color: ";
+    getline(cin >> ws, color);  // Make use of >> ws to extract out any whitespace from the stream (ignored by default).
+    cout << "Enter plural noun: ";
+    getline(cin >> ws, plural_noun);
+    cout << "Enter celebrity: ";
+    getline(cin >> ws, celebrity);
+    // (Mad Libs Game) Output poem.
+    cout << "Roses are " << color << "." << endl;
+    cout << plural_noun << " are blue." << endl;
+    cout << "I love " << celebrity << "." << endl;
 }
 
 int main()
@@ -157,5 +179,6 @@ int main()
     lesson03();
     lesson04();
     lesson05();
+    lesson06();
     return 0;
 }
