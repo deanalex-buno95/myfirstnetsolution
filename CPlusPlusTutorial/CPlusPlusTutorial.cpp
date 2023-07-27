@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <string>
 
 using namespace std;
 
@@ -109,6 +110,27 @@ void lesson03()
     cout << fmin(4, 5) << endl;
 }
 
+void lesson04()
+{
+    /**
+     * Lesson 4: Getting User Input
+     */
+    cout << "Lesson 4: Getting User Input" << endl;
+    // (Getting User Input) Declare variables for input from user.
+    string name;
+    // (Getting User Input) Prompt user.
+    cout << "Enter your name: ";
+    // (Getting User Input) User input.
+    getline(cin, name);
+    // (Getting User Input) Output the user input.
+    cout << "Hello " << name << "!" << endl;
+    // (Getting User Input) Similar process for any type other than strings.
+    int age;
+    cout << "Enter your age: ";
+    cin >> age;
+    cout << "You are " << age << " year(s) old!" << endl;
+}
+
 int main()
 {
     /**
@@ -117,5 +139,6 @@ int main()
     lesson01();
     lesson02();
     lesson03();
+    lesson04();
     return 0;
 }
