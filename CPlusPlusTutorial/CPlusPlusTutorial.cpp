@@ -9,7 +9,7 @@ void lesson01()
     /**
      * Lesson 1: Hello World + Draw A Shape
      */
-    cout << "Lesson 1: Hello World + Draw A Shape" << endl;
+    cout << "* Lesson 1: Hello World + Draw A Shape *" << endl;
     // (Hello World + Draw A Shape) Hello World.
     cout << "Hello World!" << endl;
     // (Hello World + Draw A Shape) Draw A Shape.
@@ -24,7 +24,7 @@ void lesson02()
     /**
      * Lesson 2: Variables + Data Types
      */
-    cout << "Lesson 2: Variables + Data Types" << endl;
+    cout << "* Lesson 2: Variables + Data Types *" << endl;
     // (Variables + Data Types) Variables - Manual editing.
     cout << "My name is KIRYU, I am 55 years old." << endl;
     cout << "I have a RED aura, and my name is renamed to JORYU." << endl;
@@ -56,7 +56,7 @@ void lesson03()
     /**
      * Lesson 3: Working With Strings + Numbers
      */
-    cout << "Lesson 3: Working With Strings + Numbers" << endl;
+    cout << "* Lesson 3: Working With Strings + Numbers *" << endl;
     // (Working With Strings + Numbers) Working With Strings - Without `endl`.
     cout << "Hello ";
     // (Working With Strings + Numbers) Working With Strings - Using `\n` instead of `endl`.
@@ -115,7 +115,7 @@ void lesson04()
     /**
      * Lesson 4: Getting User Input
      */
-    cout << "Lesson 4: Getting User Input" << endl;
+    cout << "* Lesson 4: Getting User Input *" << endl;
     // (Getting User Input) Declare variables for input from user.
     string name;
     // (Getting User Input) Prompt user.
@@ -131,6 +131,22 @@ void lesson04()
     cout << "You are " << age << " year(s) old!" << endl;
 }
 
+void lesson05()
+{
+    /**
+     * Lesson 5: Basic Calculator
+     */
+    cout << "* Lesson 5: Basic Calculator *" << endl;
+    // (Basic Calculator) Declare variables.
+    double num1, num2;
+    // (Basic Calculator) Prompt the user for both numerical inputs.
+    cout << "Enter first number: ";
+    cin >> num1;
+    cout << "Enter second number: ";
+    cin >> num2;
+    cout << num1 << " + " << num2 << " = " << num1 + num2;
+}
+
 int main()
 {
     /**
@@ -140,5 +156,6 @@ int main()
     lesson02();
     lesson03();
     lesson04();
+    lesson05();
     return 0;
 }
