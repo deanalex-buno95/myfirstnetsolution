@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpTutorial", "CSharpTutorial\CSharpTutorial.csproj", "{1A154D6F-EBBC-4320-B80B-2E72381AE16C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CPlusPlusTutorial", "CPlusPlusTutorial\CPlusPlusTutorial.vcxproj", "{ADAAC116-6342-455F-8633-30F291079390}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{1A154D6F-EBBC-4320-B80B-2E72381AE16C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A154D6F-EBBC-4320-B80B-2E72381AE16C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A154D6F-EBBC-4320-B80B-2E72381AE16C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADAAC116-6342-455F-8633-30F291079390}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{ADAAC116-6342-455F-8633-30F291079390}.Debug|Any CPU.Build.0 = Debug|Win32
+		{ADAAC116-6342-455F-8633-30F291079390}.Release|Any CPU.ActiveCfg = Release|Win32
+		{ADAAC116-6342-455F-8633-30F291079390}.Release|Any CPU.Build.0 = Release|Win32
 	EndGlobalSection
 EndGlobal
