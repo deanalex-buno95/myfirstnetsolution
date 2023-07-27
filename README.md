@@ -28,3 +28,26 @@ In this program, I went through a 4-hour 19-part course from `freeCodeCamp.org` 
 17. 2D Arrays
 18. Exception Handling
 19. Classes + Objects
+
+## My first C++ Program
+Under project `CPlusPlusTutorial`, I learned C++, a powerful general-purpose language that can be utilized for applications such as OSes, browsers, games, etc.
+
+In this program, I went through a 4-hour 18-part course from `freeCodeCamp.org` with the following parts:
+1. Hello World + Draw A Shape
+2. Variables + Data Types
+3. Working With Strings + Numbers
+4. Getting User Input
+5. Basic Calculator (Mini Project 1A)
+6. Mad Libs Game (Mini Project 2)
+7. Arrays
+8. Functions + Return Statement
+9. If Statement
+10. Better Calculator (Mini Project 1B)
+11. Switch Statements
+12. While Loops
+13. Guessing Game (Mini Project 3)
+14. For Loops
+15. Exponent Function (Mini Project 4)
+16. 2D Arrays + Nested Loops
+17. Pointers
+18. Classes + Objects
