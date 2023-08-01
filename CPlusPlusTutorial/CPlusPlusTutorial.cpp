@@ -175,7 +175,23 @@ void lesson07()
      * Lesson 7: Arrays
      */
     cout << "* Lesson 7: Arrays *" << endl;
-    // (Arrays) .
+    // (Arrays - Standard array definition) Create a standard array with variables.
+    char grades[] = {'S', 'A', 'B', 'C', 'D', 'E', 'F', 'L'};
+    // (Arrays - Access elements) Access an element based on index from 0 to length of array - 1.
+    char merit_grade = grades[2];
+    char highest_fail_grade = grades[4];
+    cout << "Merit grade: " << merit_grade << endl;
+    cout << "Highest fail grade: " << highest_fail_grade << endl;
+    // (Arrays - Modify elements) Change the value of an element based on index from 0 to length of array - 1.
+    grades[7] = 'X';
+    char cheat_grade = grades[7];
+    cout << "Cheat grade: " << cheat_grade << endl;
+    // (Arrays - Alternative array definition) Create an empty array.
+    string character_names[8];
+    character_names[0] = "Kazuma Kiryu";
+    character_names[6] = "Goro Majima";
+    cout << "Character number 1 (index 0): " << character_names[0] << endl;
+    cout << "Character number 7 (index 6): " << character_names[6] << endl;
 }
 
 void lesson08()
