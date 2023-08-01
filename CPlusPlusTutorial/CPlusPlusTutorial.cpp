@@ -243,7 +243,35 @@ void lesson09()
      * Lesson 9: If Statement
      */
     cout << "* Lesson 9: If Statements *" << endl;
-    // (If Statements) .
+    // (If Statements) Create if-else or if-elif-else statements.
+    int years[] = {2000, 1944, 1800, 1765};
+    for (auto year : years)
+    {
+        if ((year % 100 == 0 && year % 400 == 0) || (!(year % 100 == 0) && year % 4 == 0))
+        {
+            cout << year << " is a leap year!" << endl;
+        }
+        else
+        {
+            cout << year << " is a common year!" << endl;
+        }
+    }
+    double bmis[] = {25.0, 18.0, 21.0};
+    for (auto bmi : bmis)
+    {
+        if (bmi > 24.9)
+        {
+            cout << bmi << " You are OVERWEIGHT!" << endl;
+        }
+        else if (bmi < 18.5)
+        {
+            cout << bmi << " You are UNDERWEIGHT!" << endl;
+        }
+        else
+        {
+            cout << bmi << " You are HEALTHY!" << endl;
+        }
+    }
 }
 
 void lesson10()
