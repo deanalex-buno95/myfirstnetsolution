@@ -280,7 +280,37 @@ void lesson10()
      * Lesson 10: Better Calculator (Mini-project 1B)
      */
     cout << "* Lesson 10: Better Calculator (Mini-project 1B) *" << endl;
-    // (Better Calculator) .
+    // (Better Calculator) Declare variables.
+    double num1, num2;
+    char op;
+    // (Better Calculator) Prompt the user for inputs.
+    cout << "Enter first number: ";
+    cin >> num1;
+    cout << "Enter operator: ";
+    cin >> op;
+    cout << "Enter second number: ";
+    cin >> num2;
+    // (Better Calculator) Calculate both numbers together, with the operator via if-elif-else.
+    if (op == '+')
+    {
+        cout << num1 << " + " << num2 << " = " << num1 + num2 << endl;
+    }
+    else if (op == '-')
+    {
+        cout << num1 << " - " << num2 << " = " << num1 - num2 << endl;
+    }
+    else if (op == '*')
+    {
+        cout << num1 << " * " << num2 << " = " << num1 * num2 << endl;
+    }
+    else if (op == '/')
+    {
+        cout << num1 << " / " << num2 << " = " << num1 / num2 << endl;
+    }
+    else
+    {
+        cout << "Invalid operator!" << endl;
+    }
 }
 
 void lesson11()
