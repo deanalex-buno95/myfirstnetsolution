@@ -4,6 +4,31 @@
 
 using namespace std;
 
+/**
+ * Functions used.
+ */
+
+void print_hello_world()
+{
+    cout << "Hello World!" << endl;
+}
+
+void print_hello_user(string name, int age)
+{
+    cout << "Hello " << name << "! You are " << age << " year(s) old!" << endl;
+}
+
+void can_you_see_me();
+
+double cube_number(double number)
+{
+    return number * number * number;
+}
+
+/*
+ * All lessons.
+ */
+
 void lesson01()
 {
     /**
@@ -200,7 +225,16 @@ void lesson08()
      * Lesson 8: Functions + Return Statements
      */
     cout << "* Lesson 8: Functions + Return Statements *" << endl;
-    // (Functions + Return Statements) .
+    // (Functions + Return Statements - Simple function) Write function, with or without parameters, and call it out.
+    print_hello_world();
+    print_hello_user("JOHNATHAN IRONS", 64);
+    print_hello_user("TONY STARK", 58);
+    // (Functions + Return Statements - Function stub) Declare the function signature before it can be placed below of where it is called.
+    can_you_see_me();
+    // (Functions + Return Statements - Return) Store output of functions. Note that any step after return will not be run.
+    cout << "Cube of 3: " << cube_number(3.0) << endl;
+    double cube_of_10 = cube_number(10.0);
+    cout << "Cube of 10: " << cube_of_10 << endl;
 }
 
 void lesson09()
@@ -293,6 +327,10 @@ void lesson18()
     // (Classes + Objects) .
 }
 
+/*
+ * Main program.
+ */
+
 int main()
 {
     /**
@@ -317,4 +355,13 @@ int main()
     lesson17();
     lesson18();
     return 0;
+}
+
+/**
+ * Functions used.
+ */
+
+void can_you_see_me()
+{
+    cout << "YOU FOUND ME!" << endl;
 }
