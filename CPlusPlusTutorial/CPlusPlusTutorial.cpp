@@ -355,7 +355,32 @@ void lesson12()
      * Lesson 12: While Loops
      */
     cout << "* Lesson 12: While Loops *" << endl;
-    // (While Loops) .
+    // (While Loops - Standard) Create a standard while loop, which checks the condition before running a step.
+    int user_number;
+    cout << "Enter a number: ";
+    cin >> user_number;
+    int number_of_steps = 0;
+    while (user_number > 1)
+    {
+        if (user_number % 2 == 1)
+        {
+            user_number = 3 * user_number + 1;
+        }
+        else
+        {
+            user_number /= 2;
+        }
+        number_of_steps++;
+    }
+    cout << "Number of steps to reach " << user_number << ": " << number_of_steps << endl;
+    // (While Loops - Do) Create a do-while loop, which runs a step before checking the condition.
+    int x = 0;
+    do
+    {
+        x++;
+    }
+    while (x < 5);
+    cout << "x = " << x << " when it exits the loop." << endl;
 }
 
 void lesson13()
