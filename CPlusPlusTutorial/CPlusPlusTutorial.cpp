@@ -134,9 +134,9 @@ void lesson04()
 void lesson05()
 {
     /**
-     * Lesson 5: Basic Calculator
+     * Lesson 5: Basic Calculator (Mini-project 1A)
      */
-    cout << "* Lesson 5: Basic Calculator *" << endl;
+    cout << "* Lesson 5: Basic Calculator (Mini-project 1A) *" << endl;
     // (Basic Calculator) Declare variables.
     double num1, num2;
     // (Basic Calculator) Prompt the user for both numerical inputs.
@@ -151,9 +151,9 @@ void lesson05()
 void lesson06()
 {
     /**
-     * Lesson 6: Mad Libs Game
+     * Lesson 6: Mad Libs Game (Mini-project 2)
      */
-    cout << "* Lesson 6: Mad Libs Game *" << endl;
+    cout << "* Lesson 6: Mad Libs Game (Mini-project 2) *" << endl;
     // (Mad Libs Game) Declare variables.
     string color, plural_noun, celebrity;
     // (Mad Libs Game) Prompt the user for three string inputs.
@@ -169,6 +169,114 @@ void lesson06()
     cout << "I love " << celebrity << "." << endl;
 }
 
+void lesson07()
+{
+    /**
+     * Lesson 7: Arrays
+     */
+    cout << "* Lesson 7: Arrays *" << endl;
+    // (Arrays) .
+}
+
+void lesson08()
+{
+    /**
+     * Lesson 8: Functions + Return Statements
+     */
+    cout << "* Lesson 8: Functions + Return Statements *" << endl;
+    // (Functions + Return Statements) .
+}
+
+void lesson09()
+{
+    /**
+     * Lesson 9: If Statement
+     */
+    cout << "* Lesson 9: If Statements *" << endl;
+    // (If Statements) .
+}
+
+void lesson10()
+{
+    /**
+     * Lesson 10: Better Calculator (Mini-project 1B)
+     */
+    cout << "* Lesson 10: Better Calculator (Mini-project 1B) *" << endl;
+    // (Better Calculator) .
+}
+
+void lesson11()
+{
+    /**
+     * Lesson 11: Switch Statements
+     */
+    cout << "* Lesson 11: Switch Statements *" << endl;
+    // (Switch Statements) .
+}
+
+void lesson12()
+{
+    /**
+     * Lesson 12: While Loops
+     */
+    cout << "* Lesson 12: While Loops *" << endl;
+    // (While Loops) .
+}
+
+void lesson13()
+{
+    /**
+     * Lesson 13: Guessing Game (Mini Project 3)
+     */
+    cout << "* Lesson 13: Guessing Game (Mini Project 3) *" << endl;
+    // (Guessing Game) .
+}
+
+void lesson14()
+{
+    /**
+     * Lesson 14: For Loops
+     */
+    cout << "* Lesson 14: For Loops *" << endl;
+    // (For Loops) .
+}
+
+void lesson15()
+{
+    /**
+     * Lesson 15: Exponent Function (Mini Project 4)
+     */
+    cout << "* Lesson 15: Exponent Function (Mini Project 4) *" << endl;
+    // (Exponent Function) .
+}
+
+void lesson16()
+{
+    /**
+     * Lesson 16: 2D Arrays + Nested Loops
+     */
+    cout << "* Lesson 16: 2D Arrays + Nested Loops *" << endl;
+    // (2D Arrays + Nested Loops) .
+}
+
+void lesson17()
+{
+    /**
+     * Lesson 17: Pointers
+     */
+    cout << "* Lesson 17: Pointers *" << endl;
+    // (Pointers) .
+}
+
+void lesson18()
+{
+    /**
+     * Lesson 18: Classes + Objects
+     */
+    cout << "* Lesson 18: Classes + Objects *" << endl;
+    // (Classes + Objects) .
+}
+
 int main()
 {
     /**
@@ -180,5 +288,17 @@ int main()
     lesson04();
     lesson05();
     lesson06();
+    lesson07();
+    lesson08();
+    lesson09();
+    lesson10();
+    lesson11();
+    lesson12();
+    lesson13();
+    lesson14();
+    lesson15();
+    lesson16();
+    lesson17();
+    lesson18();
     return 0;
 }
