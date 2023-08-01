@@ -25,6 +25,29 @@ double cube_number(double number)
     return number * number * number;
 }
 
+string get_day_from_int(int day_integer)
+{
+    switch (day_integer)
+    {
+    case 0:
+        return "SUNDAY";
+    case 1:
+        return "MONDAY";
+    case 2:
+        return "TUESDAY";
+    case 3:
+        return "WEDNESDAY";
+    case 4:
+        return "THURSDAY";
+    case 5:
+        return "SATURDAY";
+    case 6:
+        return "SUNDAY";    
+    default:
+        return "N.A.";
+    }
+}
+
 /*
  * All lessons.
  */
@@ -319,7 +342,11 @@ void lesson11()
      * Lesson 11: Switch Statements
      */
     cout << "* Lesson 11: Switch Statements *" << endl;
-    // (Switch Statements) .
+    // (Switch Statements) Take an integer and put it into a switch statement to get the day.
+    for (int i = -1; i <= 7; ++i)
+    {
+        cout << "Day " << i << ": " << get_day_from_int(i) << endl;
+    }
 }
 
 void lesson12()
