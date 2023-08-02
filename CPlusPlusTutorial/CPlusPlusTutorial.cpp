@@ -465,7 +465,25 @@ void lesson16()
      * Lesson 16: 2D Arrays + Nested Loops
      */
     cout << "* Lesson 16: 2D Arrays + Nested Loops *" << endl;
-    // (2D Arrays + Nested Loops) .
+    // (2D Arrays + Nested Loops - 2D Arrays) Make a 2D array, an array filled with arrays.
+    string const rgg_character_to_aura_color_array[8][2] = {{"KIRYU", "RED"}, {"YAGAMI", "BLUE"}, {"GODA", "YELLOW"}, {"SAEJIMA", "GREEN"}, {"KAITO", "ORANGE"}, {"KASUGA", "CYAN"}, {"MAJIMA", "PURPLE"}, {"SUGIURA", "WHITE"}};
+    cout << "Kiryu\'s aura color: " << rgg_character_to_aura_color_array[0][1] << endl;
+    cout << "RGG character with a white aura: " << rgg_character_to_aura_color_array[7][0] << endl;
+    // (2D Arrays + Nested Loops - Nested Loops) Use a nested loop to traverse through a 2D array.
+    for (int i = 0; i < 8; ++i)
+    {
+        for (int j = 0; j < 2; ++j)
+        {
+            if (j == 0)
+            {
+                cout << "Character at [" << i << "][" << j << "]: " << rgg_character_to_aura_color_array[i][j] << endl;
+            }
+            else
+            {
+                cout << "Color at [" << i << "][" << j << "]: " << rgg_character_to_aura_color_array[i][j] << endl;
+            }
+        }
+    }
 }
 
 void lesson17()
