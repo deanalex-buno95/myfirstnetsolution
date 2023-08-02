@@ -492,7 +492,21 @@ void lesson17()
      * Lesson 17: Pointers
      */
     cout << "* Lesson 17: Pointers *" << endl;
-    // (Pointers) .
+    // (Pointers - Variables) Regular values that are stored by the computer that uses RAM.
+    constexpr int age = 21;
+    constexpr double gpa = 6.42;
+    const string name = "Santos";
+    // (Pointers - Declaration) Use RAM to store information.
+    const int *age_pointer = &age;
+    const double *gpa_pointer = &gpa;
+    const string *name_pointer = &name;
+    cout << "Age pointer: " << age_pointer << endl;
+    cout << "GPA pointer: " << gpa_pointer << endl;
+    cout << "Name pointer: " << name_pointer << endl;
+    // (Pointers - Dereference) Use asterisk to dereference the pointer to get the value.
+    cout << "Age: " << *age_pointer << endl;
+    cout << "GPA: " << *gpa_pointer << endl;
+    cout << "Name: " << *name_pointer << endl;
 }
 
 void lesson18()
