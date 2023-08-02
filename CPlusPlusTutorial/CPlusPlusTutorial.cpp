@@ -25,7 +25,7 @@ double cube_number(double number)
     return number * number * number;
 }
 
-string get_day_from_int(int day_integer)
+string get_day_from_int(const int day_integer)
 {
     switch (day_integer)
     {
@@ -46,6 +46,16 @@ string get_day_from_int(int day_integer)
     default:
         return "N.A.";
     }
+}
+
+int power_integer(int base_int, int exponent_int)
+{
+    int result_int = 1;
+    for (int i = 0; i < exponent_int; ++i)
+    {
+        result_int *= base_int;
+    }
+    return result_int;
 }
 
 /*
@@ -442,7 +452,11 @@ void lesson15()
      * Lesson 15: Exponent Function (Mini Project 4)
      */
     cout << "* Lesson 15: Exponent Function (Mini Project 4) *" << endl;
-    // (Exponent Function) .
+    // (Exponent Function) Create function using for-loops for powering a base integer by an exponent non-negative integer.
+    int const result_5_base_2_exponent = power_integer(5, 2);
+    int const result_7_base_3_exponent = power_integer(7, 3);
+    cout << "5 ^ 2 = " << result_5_base_2_exponent << endl;
+    cout << "7 ^ 3 = " << result_7_base_3_exponent << endl;
 }
 
 void lesson16()
