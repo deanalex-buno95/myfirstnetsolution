@@ -417,7 +417,23 @@ void lesson14()
      * Lesson 14: For Loops
      */
     cout << "* Lesson 14: For Loops *" << endl;
-    // (For Loops) .
+    // (For Loops - Standard) Increment index.
+    string const rgg_characters[] = {"Kiryu Kazuma", "Yagami Takayuki", "Goda Ryuji", "Saejima Taiga", "Kaito Masaharu", "Kasuga Ichiban", "Majima Goro", "Sugiura Fumiya"};
+    cout << "Standard For loop:" << endl;
+    for (int i = 0; i < 8; ++i)
+    {
+        cout << "Character number " << i << ": " << rgg_characters[i] << endl;
+    }
+    cout << "Reverse For loop:" << endl;
+    for (int i = 7; i >= 0; --i)
+    {
+        cout << "Character number " << i << ": " << rgg_characters[i] << endl;
+    }
+    cout << "Foreach Loop:" << endl;
+    for (const auto& rgg_character : rgg_characters)
+    {
+        cout << rgg_character << endl;
+    }
 }
 
 void lesson15()
