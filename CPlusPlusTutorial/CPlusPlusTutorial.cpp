@@ -389,7 +389,26 @@ void lesson13()
      * Lesson 13: Guessing Game (Mini Project 3)
      */
     cout << "* Lesson 13: Guessing Game (Mini Project 3) *" << endl;
-    // (Guessing Game) .
+    // (Guessing Game - Variables) Initialize variables.
+    int constexpr secret_number = 5;
+    int number_of_guesses = 3; 
+    int guess = -1;
+    // (Guessing Game - Game) Start game.
+    while (guess != secret_number && number_of_guesses != 0)
+    {
+        cout << "Enter guess: ";
+        cin >> guess;
+        number_of_guesses--;
+    }
+    // (Guessing Game - Results) Display results via if-else.
+    if (guess == secret_number)
+    {
+        cout << "You win!" << endl;
+    }
+    else
+    {
+        cout << "Better luck next time!" << endl;
+    }
 }
 
 void lesson14()
