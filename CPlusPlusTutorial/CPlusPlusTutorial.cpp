@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cmath>
 #include <string>
+#include <list>
 
 using namespace std;
 
@@ -57,6 +58,88 @@ int power_integer(int base_int, int exponent_int)
     }
     return result_int;
 }
+
+class rgg_character
+{
+    string name_;
+    string nationality_;
+    public:
+        rgg_character()
+        {
+            name_ = "Unknown";
+            nationality_ = "Unknown";
+        }
+        rgg_character(const string& name, const string& nationality)
+        {
+            name_ = name;
+            nationality_ = nationality;
+        }
+        string get_name()
+        {
+            return name_;
+        }
+        void set_name(const string& name)
+        {
+            name_ = name;
+        }
+        string get_nationality()
+        {
+            return nationality_;
+        }
+        void set_nationality(const string& nationality)
+        {
+            nationality_ = nationality;
+        }
+        void print()
+        {
+            cout << "Name: " << get_name() << endl;
+            cout << "Nationality: " << get_nationality() << endl;
+        }
+};
+
+class rgg_fighting_character : public rgg_character
+{
+    list<string> fighting_styles_;
+
+    list<string> get_fighting_styles()
+    {
+        return fighting_styles_;
+    }
+    
+    public:
+        rgg_fighting_character() = default;
+
+        rgg_fighting_character(const string& name, const string& nationality, const list<string>& fighting_styles) : rgg_character(name, nationality)
+        {
+            fighting_styles_ = fighting_styles;
+        }
+    
+        string get_fighting_styles(const int style_number)
+        {
+            if (fighting_styles_.empty())
+            {
+                return "No styles found";
+            }
+            if (style_number < 1 || style_number > fighting_styles_.size())
+            {
+                return "N/A";
+            }
+            auto it = fighting_styles_.begin();
+            advance(it, style_number-1);
+            return *it;
+        }
+
+        void print()
+        {
+            cout << "Name: " << get_name() << endl;
+            cout << "Nationality: " << get_nationality() << endl;
+            cout << "Fighting styles: " << endl;
+            for (const auto& fighting_style : get_fighting_styles())
+            {
+                cout << "- " << fighting_style << endl;
+            }
+        }
+};
 
 /*
  * All lessons.
@@ -515,7 +598,16 @@ void lesson18()
      * Lesson 18: Classes + Objects
      */
     cout << "* Lesson 18: Classes + Objects *" << endl;
-    // (Classes + Objects) .
+    // (Classes + Objects - Declare object) Create an object with a class, with getters and setters, and methods.
+    rgg_character character1;
+    character1.set_name("Mack");
+    character1.set_nationality("American");
+    character1.print();
+    // (Classes + Objects - Declare sub-class object) Create an object with a class based on a parent, with overwritten methods via polymorphism.
+    rgg_fighting_character character2 = rgg_fighting_character("Kazuma Kiryu", "Japanese", list<string>{"Dragon", "Brawler", "Rush", "Beast", "Yakuza", "Agent"});
+    cout << "Red style: " << character2.get_fighting_styles(1) << endl;
+    cout << "White style: " << character2.get_fighting_styles(5) << endl;
+    character2.print();
 }
 
 /*
